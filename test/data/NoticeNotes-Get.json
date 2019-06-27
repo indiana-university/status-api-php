@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "createdBy": "jhoerr",
+    "createdOn": "2015-07-09T00:00:00",
+    "content": "Note content",
+    "external": true
+  },
+  {
+    "id": 2,
+    "createdBy": "jhoerr",
+    "createdOn": "2015-07-10T00:00:00",
+    "content": "Other note content",
+    "external": true
+  }
+]

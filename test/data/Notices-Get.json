@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "name": "Difficulties downloading content from IUware",
+    "noticeType": "Ongoing",
+    "content": "Some users are having trouble downloading content from IUware. Administrators are investigating",
+    "visibleStart": "2015-05-20T00:00:00",
+    "visibleEnd": "2015-05-21T00:00:00",
+    "campuses": [
+      {
+        "id": 1,
+        "name": "Bloomington"
+      },
+      {
+        "id": 2,
+        "name": "Indianapolis"
+      }
+    ],
+    "services": [
+      {
+        "id": 2,
+        "name": "IUware",
+        "url": "https://kb.iu.edu/d/agze",
+        "serviceGroup": {
+          "id": 1,
+          "name": "Enterprise Services",
+          "description": "Enterprise web services"
+        },
+        "description": "IUware is a software distribution service.",
+        "campuses": [
+          {
+            "id": 1,
+            "name": "Bloomington"
+          },
+          {
+            "id": 2,
+            "name": "Indianapolis"
+          }
+        ]
+      }
+    ],
+    "publishedOn": "2015-05-20T00:00:00",
+    "createdBy": "jhoerr",
+    "createdOn": "2015-05-20T00:00:00",
+    "publishedBy": "jhoerr",
+    "lastModifiedBy": "jhoerr",
+    "lastModifiedOn": "2015-05-21T00:00:00",
+    "status": "Published"
+  },
+  {
+    "id": 2,
+    "name": "Maintenance on CAS",
+    "noticeType": "Maintenance",
+    "content": "CAS will be temporarily unavailable while administrators apply patches to the servers.",
+    "visibleStart": "2015-05-20T00:00:00",
+    "visibleEnd": "2015-05-21T00:00:00",
+    "changeStart": "2015-05-20T06:00:00",
+    "changeEnd": "2015-05-20T06:15:00",
+    "campuses": [
+      {
+        "id": 1,
+        "name": "Bloomington"
+      },
+      {
+        "id": 2,
+        "name": "Indianapolis"
+      }
+    ],
+    "services": [
+      {
+        "id": 1,
+        "name": "CAS",
+        "url": "https://kb.iu.edu/d/akui",
+        "serviceGroup": {
+          "id": 2,
+          "name": "Authentication",
+          "description": "Authentication services"
+        },
+        "description": "At Indiana University, Central Authentication Service (CAS) is a login service that allows you to access multiple password-protected web systems after logging in once on a central authentication server, often referred to as single sign-on.",
+        "campuses": [
+          {
+            "id": 1,
+            "name": "Bloomington"
+          },
+          {
+            "id": 2,
+            "name": "Indianapolis"
+          }
+        ]
+      }
+    ],
+    "publishedOn": "2015-05-20T00:00:00",
+    "createdBy": "jhoerr",
+    "createdOn": "2015-05-20T00:00:00",
+    "publishedBy": "jhoerr",
+    "lastModifiedBy": "jhoerr",
+    "lastModifiedOn": "2015-05-21T00:00:00",
+    "status": "Published"
+  }
+]
+

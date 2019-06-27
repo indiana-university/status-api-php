@@ -1,0 +1,51 @@
+{
+  "id": 1,
+  "name": "Difficulties downloading content from IUware",
+  "noticeType": "Ongoing",
+  "content": "Some users are having trouble downloading content from IUware. Administrators are investigating",
+  "visibleStart": "2015-05-20T00:00:00",
+  "visibleEnd": "2015-05-21T00:00:00",
+  "campuses": [
+    {
+      "id": 1,
+      "name": "Bloomington"
+    },
+    {
+      "id": 2,
+      "name": "Indianapolis"
+    }
+  ],
+  "services": [
+    {
+      "id": 2,
+      "name": "IUware",
+      "url": "https://kb.iu.edu/d/agze",
+      "reportStatus": true,
+      "serviceGroup": {
+        "id": 1,
+        "name": "Enterprise Services",
+        "description": "Enterprise web services"
+      },
+      "description": "IUware is a software distribution service.",
+      "campuses": [
+        {
+          "id": 1,
+          "name": "Bloomington",
+          "abbreviation": "BL"
+        },
+        {
+          "id": 2,
+          "name": "Indianapolis",
+          "abbreviation": "IN"
+        }
+      ]
+    }
+  ],
+  "publishedOn": "2015-05-20T00:00:00",
+  "createdBy": "jhoerr",
+  "createdOn": "2015-05-20T00:00:00",
+  "publishedBy": "jhoerr",
+  "lastModifiedBy": "jhoerr",
+  "lastModifiedOn": "2015-05-21T00:00:00",
+  "status": "Published"
+}

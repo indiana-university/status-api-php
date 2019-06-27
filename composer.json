@@ -1,0 +1,38 @@
+{
+    "name": "avitacco/status-api",
+    "description": "Provides a PHP 7 interface to status.uits.iu.edu",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "Anthony Vitacco",
+            "email": "avitacco@iu.edu",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Edu\\Iu\\Uits\\Status\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.0",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^2.7",
+        "phpunit/phpunit": "~6",
+        "rych/random": "^0.1.0",
+        "phpmd/phpmd": "^2.4",
+        "phpstan/phpstan": "^0.6.4"
+    },
+    "scripts": {
+        "phpcs": ["vendor/bin/phpcs --standard=PSR2 src"],
+        "phpcbf": ["vendor/bin/phpcbf --standard=PSR2 src"],
+        "phpmd": ["vendor/bin/phpmd --exclude test src text cleancode,codesize,controversial,design,unusedcode"],
+        "phpunit": ["vendor/bin/phpunit"],
+        "phpstan": ["vendor/bin/phpstan analyse -l 5 src"],
+        "check-code-format": ["@phpcbf", "@phpcs"],
+        "check-code-quality": ["@phpstan", "@phpmd"],
+        "run-tests": ["@phpunit"]
+    }
+}
