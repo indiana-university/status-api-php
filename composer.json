@@ -1,12 +1,15 @@
 {
-    "name": "avitacco/status-api",
+    "name": "indiana-university/status-api-php",
     "description": "Provides a PHP 7 interface to status.uits.iu.edu",
-    "license": "mit",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "homepage": "https://github.com/indiana-university/status-api-php",
     "authors": [
         {
             "name": "Anthony Vitacco",
             "email": "avitacco@iu.edu",
-            "role": "Developer"
+            "homepage": "https://github.com/avitacco/",
+            "role": "developer"
         }
     ],
     "autoload": {
