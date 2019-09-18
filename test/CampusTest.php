@@ -8,6 +8,8 @@ declare(strict_types=1);
  */
 namespace Edu\Iu\Uits\Status\Tests;
 
+use RuntimeException;
+use TypeError;
 use PHPUnit\Framework\TestCase;
 use Edu\Iu\Uits\Status\Campus;
 
@@ -45,12 +47,12 @@ class CampusTest extends TestCase
     }
     
     /**
-     * @expectedException TypeError
      * @dataProvider badIdDataProvider
      */
     public function testSetIdWithBadData($data)
     {
         $campus = new Campus();
+        $this->expectException(TypeError::class);
         $campus->setId($data);
     }
     
@@ -81,23 +83,21 @@ class CampusTest extends TestCase
     }
     
     /**
-     * @expectedException TypeError
      * @dataProvider badNameDataProvider
      */
     public function testSetNameWithBadData($data)
     {
         $campus = new Campus();
+        $this->expectException(TypeError::class);
         $campus->setName($data);
     }
-    
-    /**
-     * @expectedException RuntimeException
-     * @expectedExceptionCode 413
-     */
+
     public function testSetNameWithTooLongString()
     {
         $campus = new Campus();
         $random = new \Rych\Random\Random();
+        $this->expectException(RuntimeException::class);
+        $this->expectExceptionCode(413);
         $campus->setName($random->getRandomString(300));
     }
     
@@ -118,23 +118,21 @@ class CampusTest extends TestCase
     }
     
     /**
-     * @expectedException TypeError
      * @dataProvider badNameDataProvider
      */
     public function testSetAbbreviationWithBadData($data)
     {
         $campus = new Campus();
+        $this->expectException(TypeError::class);
         $campus->setAbbreviation($data);
     }
     
-    /**
-     * @expectedException RuntimeException
-     * @expectedExceptionCode 413
-     */
     public function testSetAbbreviationWithTooLongString()
     {
         $campus = new Campus();
         $random = new \Rych\Random\Random();
+        $this->expectException(RuntimeException::class);
+        $this->expectExceptionCode(413);
         $campus->setAbbreviation($random->getRandomString(300));
     }
 }

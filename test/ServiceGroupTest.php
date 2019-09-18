@@ -10,6 +10,8 @@ namespace Edu\Iu\Uits\Status\Tests;
 
 use PHPUnit\Framework\TestCase;
 use Edu\Iu\Uits\Status\ServiceGroup;
+use RuntimeException;
+use TypeError;
 
 /**
  * This is the test case for the ServiceGroup class
@@ -36,12 +38,12 @@ class ServiceGroupTest extends TestCase
     }
     
     /**
-     * @expectedException TypeError
      * @dataProvider badIntDataProvider
      */
     public function testSetIdWithBadData($data)
     {
         $serviceGroup = new ServiceGroup();
+        $this->expectException(TypeError::class);
         $serviceGroup->setId($data);
     }
     
@@ -62,23 +64,21 @@ class ServiceGroupTest extends TestCase
     }
     
     /**
-     * @expectedException TypeError
      * @dataProvider badStringDataProvider
      */
     public function testSetNameWithBadData($data)
     {
         $serviceGroup = new ServiceGroup();
+        $this->expectException(TypeError::class);
         $serviceGroup->setName($data);
     }
-    
-    /**
-     * @expectedException RuntimeException
-     * @expectedExceptionCode 413
-     */
+
     public function testSetNameDataTooLong()
     {
         $serviceGroup = new ServiceGroup();
         $random = new \Rych\Random\Random();
+        $this->expectException(RuntimeException::class);
+        $this->expectExceptionCode(413);
         $serviceGroup->setName($random->getRandomString(300));
     }
     
@@ -99,23 +99,21 @@ class ServiceGroupTest extends TestCase
     }
     
     /**
-     * @expectedException TypeError
      * @dataProvider badStringDataProvider
      */
     public function testSetDescriptionWithBadData($data)
     {
         $serviceGroup = new ServiceGroup();
+        $this->expectException(TypeError::class);
         $serviceGroup->setDescription($data);
     }
-    
-    /**
-     * @expectedException RuntimeException
-     * @expectedExceptionCode 413
-     */
+
     public function testSetDescriptionDataTooLong()
     {
         $serviceGroup = new ServiceGroup();
         $random = new \Rych\Random\Random();
+        $this->expectException(RuntimeException::class);
+        $this->expectExceptionCode(413);
         $serviceGroup->setDescription($random->getRandomString(2000));
     }
     
